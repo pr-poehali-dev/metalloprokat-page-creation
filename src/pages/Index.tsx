@@ -658,7 +658,8 @@ export default function Index() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
             <AnimatedSection>
               <div className="card-steel p-8">
-                <h3 className="font-oswald font-semibold text-white text-2xl mb-6 uppercase tracking-wide">Оставить заявку</h3>
+                <h3 className="font-oswald font-semibold text-white text-2xl mb-1 uppercase tracking-wide">Оставить заявку</h3>
+                <p className="text-sm mb-6" style={{ color: "hsl(40,10%,55%)" }}>на расчёт стоимости металлопроката</p>
                 <div className="space-y-4">
                   {[
                     { label: "Ваше имя", key: "name", type: "text", placeholder: "Иван Петров" },
