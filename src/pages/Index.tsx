@@ -720,11 +720,13 @@ export default function Index() {
                     { icon: "MessageCircle", label: "WhatsApp" },
                     { icon: "Send", label: "Telegram" },
                     { icon: "Phone", label: "Viber" },
+                    { icon: "MessageSquare", label: "Макс", href: "https://max.ru/+79939150748" },
                   ].map((m, i) => (
-                    <button key={i} className="flex items-center gap-2 px-4 py-2.5 border text-sm hover:text-orange-500 hover:border-orange-500/40 transition-all"
+                    <a key={i} href={m.href || "#"} target="_blank" rel="noopener noreferrer"
+                      className="flex items-center gap-2 px-4 py-2.5 border text-sm hover:text-orange-500 hover:border-orange-500/40 transition-all"
                       style={{ borderColor: "hsl(20,8%,25%)", color: "hsl(40,10%,55%)" }}>
                       <Icon name={m.icon as "Send"} size={15} />{m.label}
-                    </button>
+                    </a>
                   ))}
                 </div>
               </div>
