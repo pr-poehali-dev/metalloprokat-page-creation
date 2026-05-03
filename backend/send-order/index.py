@@ -53,7 +53,7 @@ def handler(event: dict, context) -> dict:
     <html><body style="font-family: Arial, sans-serif; background: #f5f5f5; padding: 20px;">
     <div style="max-width: 600px; margin: 0 auto; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
       <div style="background: #1a1917; padding: 24px; text-align: center;">
-        <span style="color: #f97316; font-size: 22px; font-weight: bold; letter-spacing: 2px;">СТАЛЬПРОМ</span>
+        <span style="color: #f97316; font-size: 22px; font-weight: bold; letter-spacing: 2px;">СПЕЦМЕТАЛЛГРУПП</span>
         <p style="color: #888; margin: 4px 0 0; font-size: 13px;">Новая заявка с сайта</p>
       </div>
       <div style="padding: 28px;">
@@ -72,7 +72,7 @@ def handler(event: dict, context) -> dict:
         </table>
       </div>
       <div style="background: #f9f9f9; padding: 16px 28px; border-top: 1px solid #eee;">
-        <p style="margin: 0; color: #aaa; font-size: 12px;">Заявка отправлена с сайта stalprom.ru</p>
+        <p style="margin: 0; color: #aaa; font-size: 12px;">Заявка отправлена с сайта smg-metall.ru</p>
       </div>
     </div>
     </body></html>
