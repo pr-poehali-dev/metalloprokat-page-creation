@@ -728,9 +728,8 @@ export default function Index() {
                 <h4 className="font-oswald font-semibold text-white text-lg mb-3 uppercase tracking-wider">Мессенджеры</h4>
                 <div className="flex gap-3">
                   {[
-                    { icon: "MessageCircle", label: "WhatsApp" },
-                    { icon: "Send", label: "Telegram" },
-                    { icon: "Phone", label: "Viber" },
+                    { icon: "MessageCircle", label: "WhatsApp", href: "https://wa.me/74951780316" },
+                    { icon: "Send", label: "Telegram", href: "https://t.me/manager_721" },
                     { icon: "MessageSquare", label: "Макс", href: "https://max.ru/+79939150748" },
                   ].map((m, i) => (
                     <a key={i} href={m.href || "#"} target="_blank" rel="noopener noreferrer"
