@@ -238,10 +238,16 @@ export default function Index() {
           </nav>
 
           <div className="flex items-center gap-3">
-            <a href="tel:+78001234567" className="hidden md:flex items-center gap-2 text-white font-oswald font-medium text-sm hover:text-orange-500 transition-colors">
-              <Icon name="Phone" size={14} className="text-orange-500" />
-              8 (800) 123-45-67
-            </a>
+            <div className="hidden md:flex flex-col items-end gap-0.5">
+              <a href="tel:+74951780316" className="flex items-center gap-2 text-white font-oswald font-medium text-sm hover:text-orange-500 transition-colors">
+                <Icon name="Phone" size={14} className="text-orange-500" />
+                8 (495) 178-03-16
+              </a>
+              <a href="tel:+78126444149" className="flex items-center gap-2 text-white font-oswald font-medium text-sm hover:text-orange-500 transition-colors">
+                <Icon name="Phone" size={14} className="text-orange-500" />
+                8 (812) 644-41-49
+              </a>
+            </div>
             <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="lg:hidden p-2 text-white">
               <Icon name={mobileMenuOpen ? "X" : "Menu"} size={22} />
             </button>
@@ -255,9 +261,14 @@ export default function Index() {
                 <a key={item.href} href={item.href} onClick={(e) => { e.preventDefault(); scrollTo(item.href); }} className="nav-link py-2">{item.label}</a>
               ))}
             </div>
-            <a href="tel:+78001234567" className="mt-3 flex items-center gap-2 text-orange-500 font-oswald text-base">
-              <Icon name="Phone" size={16} />8 (800) 123-45-67
-            </a>
+            <div className="mt-3 flex flex-col gap-1">
+              <a href="tel:+74951780316" className="flex items-center gap-2 text-orange-500 font-oswald text-base">
+                <Icon name="Phone" size={16} />8 (495) 178-03-16
+              </a>
+              <a href="tel:+78126444149" className="flex items-center gap-2 text-orange-500 font-oswald text-base">
+                <Icon name="Phone" size={16} />8 (812) 644-41-49
+              </a>
+            </div>
           </div>
         )}
       </header>
@@ -696,8 +707,8 @@ export default function Index() {
             <AnimatedSection>
               <div className="space-y-3">
                 {[
-                  { icon: "Phone", label: "Телефон (бесплатно)", value: "8 (800) 123-45-67", href: "tel:+78001234567" },
-                  { icon: "Phone", label: "Прямой номер", value: "+7 (912) 345-67-89", href: "tel:+79123456789" },
+                  { icon: "Phone", label: "Москва", value: "8 (495) 178-03-16", href: "tel:+74951780316" },
+                  { icon: "Phone", label: "Санкт-Петербург", value: "8 (812) 644-41-49", href: "tel:+78126444149" },
                   { icon: "Mail", label: "Email", value: "info@stalprom.ru", href: "mailto:info@stalprom.ru" },
                   { icon: "MapPin", label: "Адрес склада", value: "г. Екатеринбург, ул. Промышленная, 45", href: "#" },
                   { icon: "Clock", label: "Режим работы", value: "Пн–Пт: 8:00–18:00, Сб: 9:00–15:00", href: "#" },
