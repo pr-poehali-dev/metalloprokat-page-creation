@@ -221,10 +221,10 @@ export default function Index() {
         <div className="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
           <a href="#home" onClick={(e) => { e.preventDefault(); scrollTo("#home"); }} className="flex items-center gap-3">
             <div className="w-8 h-8 bg-orange-500 flex items-center justify-center">
-              <span className="text-black font-oswald font-bold text-sm">СП</span>
+              <span className="text-black font-oswald font-bold text-sm">СМ</span>
             </div>
             <div>
-              <div className="font-oswald font-bold text-lg text-white leading-tight tracking-wide">СТАЛЬПРОМ</div>
+              <div className="font-oswald font-bold text-lg text-white leading-tight tracking-wide">СПЕЦМЕТАЛЛГРУПП</div>
               <div className="text-orange-500 text-[10px] tracking-widest uppercase leading-tight">Металлопрокат</div>
             </div>
           </a>
@@ -738,10 +738,10 @@ export default function Index() {
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-3">
             <div className="w-7 h-7 bg-orange-500 flex items-center justify-center">
-              <span className="text-black font-oswald font-bold text-xs">СП</span>
+              <span className="text-black font-oswald font-bold text-xs">СМ</span>
             </div>
             <div>
-              <div className="font-oswald font-semibold text-white text-sm tracking-wide">СТАЛЬПРОМ</div>
+              <div className="font-oswald font-semibold text-white text-sm tracking-wide">СПЕЦМЕТАЛЛГРУПП</div>
               <div className="text-xs" style={{ color: "hsl(40,10%,40%)" }}>Металлопрокат</div>
             </div>
           </div>
