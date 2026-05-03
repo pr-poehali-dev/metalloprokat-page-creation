@@ -164,6 +164,29 @@ export default function Index() {
   const [calcParams, setCalcParams] = useState<CalcParams>({});
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const [contactForm, setContactForm] = useState({ name: "", phone: "", message: "" });
+  const [formStatus, setFormStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
+
+  const SEND_ORDER_URL = "https://functions.poehali.dev/4a434aad-e7ba-4de6-8eb1-205ab45f61bb";
+
+  const handleSubmit = async () => {
+    if (!contactForm.name.trim() || !contactForm.phone.trim()) return;
+    setFormStatus("sending");
+    try {
+      const res = await fetch(SEND_ORDER_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(contactForm),
+      });
+      if (res.ok) {
+        setFormStatus("success");
+        setContactForm({ name: "", phone: "", message: "" });
+      } else {
+        setFormStatus("error");
+      }
+    } catch {
+      setFormStatus("error");
+    }
+  };
 
   useEffect(() => {
     const defaults: CalcParams = {};
@@ -647,9 +670,24 @@ export default function Index() {
                       className="w-full text-white text-sm px-4 py-3 focus:outline-none focus:border-orange-500 transition-colors resize-none"
                       style={{ background: "hsl(20,10%,6%)", border: "1px solid hsl(20,8%,22%)" }} />
                   </div>
-                  <button className="btn-primary w-full py-4 text-sm flex items-center justify-center gap-2">
-                    <Icon name="Send" size={16} />Отправить заявку
-                  </button>
+                  {formStatus === "success" ? (
+                    <div className="w-full py-4 text-sm flex items-center justify-center gap-2 font-oswald font-semibold tracking-wider" style={{ background: "rgba(34,197,94,0.15)", border: "1px solid rgba(34,197,94,0.4)", color: "#4ade80" }}>
+                      <Icon name="CheckCircle" size={16} />Заявка отправлена!
+                    </div>
+                  ) : formStatus === "error" ? (
+                    <div className="space-y-3">
+                      <div className="w-full py-3 text-sm flex items-center justify-center gap-2 font-oswald" style={{ background: "rgba(239,68,68,0.1)", border: "1px solid rgba(239,68,68,0.3)", color: "#f87171" }}>
+                        <Icon name="AlertCircle" size={15} />Ошибка. Позвоните нам напрямую.
+                      </div>
+                      <button onClick={handleSubmit} className="btn-primary w-full py-4 text-sm flex items-center justify-center gap-2">
+                        <Icon name="RotateCcw" size={16} />Попробовать снова
+                      </button>
+                    </div>
+                  ) : (
+                    <button onClick={handleSubmit} disabled={formStatus === "sending"} className="btn-primary w-full py-4 text-sm flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed">
+                      {formStatus === "sending" ? <><Icon name="Loader" size={16} className="animate-spin" />Отправляем...</> : <><Icon name="Send" size={16} />Отправить заявку</>}
+                    </button>
+                  )}
                   <p className="text-xs text-center" style={{ color: "hsl(40,10%,40%)" }}>Перезвоним в течение 30 минут в рабочее время</p>
                 </div>
               </div>
