@@ -709,7 +709,7 @@ export default function Index() {
                 {[
                   { icon: "Phone", label: "Москва", value: "8 (495) 178-03-16", href: "tel:+74951780316" },
                   { icon: "Phone", label: "Санкт-Петербург", value: "8 (812) 644-41-49", href: "tel:+78126444149" },
-                  { icon: "Mail", label: "Email", value: "info@stalprom.ru", href: "mailto:info@stalprom.ru" },
+                  { icon: "Mail", label: "Email", value: "zakaz@smg-metall.ru", href: "mailto:zakaz@smg-metall.ru" },
                   { icon: "MapPin", label: "Адрес склада", value: "г. Екатеринбург, ул. Промышленная, 45", href: "#" },
                   { icon: "Clock", label: "Режим работы", value: "Пн–Пт: 8:00–18:00, Сб: 9:00–15:00", href: "#" },
                 ].map((item, i) => (
