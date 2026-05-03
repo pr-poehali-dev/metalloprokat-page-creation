@@ -767,6 +767,29 @@ export default function Index() {
           </div>
         </div>
       </footer>
+
+      {/* Плавающие кнопки мессенджеров */}
+      <div className="fixed right-4 bottom-8 z-50 flex flex-col gap-3">
+        <a href="https://wa.me/74951780316" target="_blank" rel="noopener noreferrer"
+          className="w-12 h-12 rounded-full flex items-center justify-center shadow-lg transition-transform hover:scale-110"
+          style={{ backgroundColor: "#25D366" }} title="WhatsApp">
+          <Icon name="MessageCircle" size={22} className="text-white" />
+        </a>
+        <a href="https://t.me/manager_721" target="_blank" rel="noopener noreferrer"
+          className="w-12 h-12 rounded-full flex items-center justify-center shadow-lg transition-transform hover:scale-110"
+          style={{ backgroundColor: "#2AABEE" }} title="Telegram">
+          <Icon name="Send" size={22} className="text-white" />
+        </a>
+        <a href="https://max.ru/+79939150748" target="_blank" rel="noopener noreferrer"
+          className="w-12 h-12 rounded-full flex items-center justify-center shadow-lg transition-transform hover:scale-110"
+          style={{ backgroundColor: "#0077FF" }} title="Макс">
+          <Icon name="MessageSquare" size={22} className="text-white" />
+        </a>
+        <a href="tel:+74951780316"
+          className="w-12 h-12 rounded-full flex items-center justify-center shadow-lg transition-transform hover:scale-110 bg-orange-500" title="Позвонить">
+          <Icon name="Phone" size={22} className="text-white" />
+        </a>
+      </div>
     </div>
   );
 }
